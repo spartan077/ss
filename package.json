@@ -1,0 +1,24 @@
+{
+  "name": "ora-user-dashboard",
+  "version": "1.0.0",
+  "description": "A modern web dashboard for managing user subscriptions and credits with Supabase integration",
+  "main": "INDEX.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build process required for static site'",
+    "start": "echo 'Open INDEX.html in browser'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "dashboard",
+    "supabase",
+    "subscriptions",
+    "credits",
+    "vercel"
+  ],
+  "author": "Ora Dashboard",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
