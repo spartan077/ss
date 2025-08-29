@@ -5,9 +5,10 @@
   "main": "INDEX.html",
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'No build process required for static site'",
+    "build": "node build.js",
     "start": "echo 'Open INDEX.html in browser'",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod",
+    "vercel-build": "node build.js"
   },
   "keywords": [
     "dashboard",
@@ -18,6 +19,9 @@
   ],
   "author": "Ora Dashboard",
   "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "devDependencies": {
     "vercel": "^32.0.0"
   }

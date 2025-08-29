@@ -1,21 +1,23 @@
 // Configuration file for environment variables
-// In a production environment, these values would be injected during build time
-// For static hosting, you can create multiple config files for different environments
+// Vercel deployment ready - supports both static hosting and environment variables
 
 const config = {
     // Supabase Configuration
+    // For Vercel deployment, update these values or use environment variables
     SUPABASE_URL: 'https://ygrcjsqsknogyezwoest.supabase.co',
     SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlncmNqc3Fza25vZ3llendvZXN0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYzMjYxNzIsImV4cCI6MjA3MTkwMjE3Mn0.JsPXvsHk8eYpS2-0izq9-sBjOCCTfUKE6tHiIF9EJP0',
     
-    // Alternative: Load from .env file (requires a build process)
-    // These can be replaced with your actual environment variables during build
+    // Vercel Environment Support
+    // For Vercel deployment, these will be replaced with your environment variables
     init: function() {
-        // In a build environment, you would replace these with process.env values
-        // For now, we'll use the hardcoded values but provide a structure for env vars
+        // Check if we're in a Vercel environment with injected variables
+        // This is a placeholder for when you want to use Vercel environment variables
+        // You would typically use a build tool to inject these, but for static hosting,
+        // you can manually update the values above
         
-        // Example for build environments:
-        // this.SUPABASE_URL = process.env.SUPABASE_URL || this.SUPABASE_URL;
-        // this.SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || this.SUPABASE_ANON_KEY;
+        // For production deployment with Vercel:
+        // 1. Set environment variables in Vercel dashboard: SUPABASE_URL and SUPABASE_ANON_KEY
+        // 2. Update the values above, or use a build process to inject them
         
         return this;
     }
@@ -23,3 +25,8 @@ const config = {
 
 // Initialize the config
 window.appConfig = config.init();
+
+// Production deployment tip:
+// For Vercel, you can also use environment variables by:
+// 1. Setting them in Vercel dashboard under Project Settings → Environment Variables
+// 2. Then update this file with the actual values or use a build tool
